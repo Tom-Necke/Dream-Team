@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-const axios = require("axios");
-let [userUrl] = process.argv.slice(2)
+import chalk from "chalk";
+import axios from "axios";
+let [userUrl] = process.argv.slice(2);
 const encodedParams = new URLSearchParams();
 encodedParams.append("url", `https://${userUrl}`);
 
@@ -16,7 +17,7 @@ const options = {
 };
 
 axios.request(options).then(function (response) {
-	console.log(response.data);
+	console.log(chalk.blue(response.data.result_url));
 }).catch(function (error) {
 	console.error(error);
 });
