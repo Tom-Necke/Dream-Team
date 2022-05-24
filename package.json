@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "Joachim, Christoph, Tom",
   "main": "index.js",
-  "scripts":{
+  "scripts": {
     "start": "node src/index.js",
     "deploy": "chmod +x src/index.js && sudo npm link",
     "undeploy": "npm unlink"
-    },
-  
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tom-Necke/Dream-Team.git"
@@ -21,11 +20,11 @@
   },
   "homepage": "https://github.com/Tom-Necke/Dream-Team#readme",
   "dependencies": {
-
     "axios": "^0.27.2",
-    "dotenv": "^16.0.1"
+    "chalk": "^5.0.1"
   },
   "bin": {
     "shortener": "src/index.js"
-  }
+  },
+  "type": "module"
 }
