@@ -17,7 +17,9 @@ const options = {
 };
 
 axios.request(options).then(function (response) {
-	console.log(chalk.blue(response.data.result_url));
+  console.log(
+     `The return of the Shorty: ${chalk.bgBlue.red(response.data.result_url)}!`
+  );
 }).catch(function (error) {
 	console.error(error);
 });
