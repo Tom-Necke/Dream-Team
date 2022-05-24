@@ -5,6 +5,8 @@ let [userUrl] = process.argv.slice(2);
 const encodedParams = new URLSearchParams();
 encodedParams.append("url", `https://${userUrl}`);
 
+console.log(`Thank you for your input: ${encodedParams}! Interesting! Our suggestion is following! `)
+
 const options = {
   method: 'POST',
   url: 'https://url-shortener-service.p.rapidapi.com/shorten',
