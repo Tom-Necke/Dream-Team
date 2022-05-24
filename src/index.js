@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import chalk from "chalk";
 import axios from "axios";
+import gradient from "gradient-string";
+
 let [userUrl] = process.argv.slice(2);
 const encodedParams = new URLSearchParams();
 encodedParams.append("url", `https://${userUrl}`);
@@ -18,8 +20,18 @@ const options = {
   data: encodedParams
 };
 
+let duck = gradient('orange', 'yellow').multiline([
+  "  __",
+  "<(o )___",
+  " ( ._> /",
+  "  `---'",
+].join('\n'));
+
+
 axios.request(options).then(function (response) {
-	console.log(chalk.blue(response.data.result_url));
+  console.log();
+  console.log(`${duck} ${gradient("lightBlue", "yellow", "red")("The return of the Shorty:")} ${chalk.bgBlue.red(response.data.result_url)}!`);
+  console.log("Shorty-App is a solution by Dream-Team.");
 }).catch(function (error) {
 	console.error(error);
 });
