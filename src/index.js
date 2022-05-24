@@ -7,8 +7,6 @@ let [userUrl] = process.argv.slice(2);
 const encodedParams = new URLSearchParams();
 encodedParams.append("url", `https://${userUrl}`);
 
-console.log(`Thank you for your input: ${encodedParams}! Interesting! Our suggestion is following! `)
-
 const options = {
   method: 'POST',
   url: 'https://url-shortener-service.p.rapidapi.com/shorten',
@@ -28,10 +26,24 @@ let duck = gradient('orange', 'yellow').multiline([
 ].join('\n'));
 
 
+let logo = gradient('blue', 'yellow').multiline([
+  "██████╗░██████╗░███████╗░█████╗░███╗░░░███╗  ████████╗███████╗░█████╗░███╗░░░███╗",
+  "██╔══██╗██╔══██╗██╔════╝██╔══██╗████╗░████║  ╚══██╔══╝██╔════╝██╔══██╗████╗░████║",
+  "██║░░██║██████╔╝█████╗░░███████║██╔████╔██║  ░░░██║░░░█████╗░░███████║██╔████╔██║",
+  "██║░░██║██╔══██╗██╔══╝░░██╔══██║██║╚██╔╝██║  ░░░██║░░░██╔══╝░░██╔══██║██║╚██╔╝██║",
+  "██████╔╝██║░░██║███████╗██║░░██║██║░╚═╝░██║  ░░░██║░░░███████╗██║░░██║██║░╚═╝░██║",
+  "╚═════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝  ░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝",
+].join('\n'));
+
+
 axios.request(options).then(function (response) {
   console.log();
-  console.log(`${duck} ${gradient("lightBlue", "yellow", "red")("The return of the Shorty:")} ${chalk.bgBlue.red(response.data.result_url)}!`);
-  console.log("Shorty-App is a solution by Dream-Team.");
+  console.log(`Hello Nerd! Thank you for your input: ${chalk.blue.bgRed(userUrl)}! Interesting! Our suggestion is following! `)
+  console.log(`${duck} ${gradient("lightBlue", "yellow", "red")("The return of the Shorty:")} ${chalk.bgBlueBright.red(response.data.result_url)}!`);
+  console.log();
+  console.log("Shorty-App is a solution by:");
+  console.log();
+  console.log(logo);
 }).catch(function (error) {
 	console.error(error);
 });
