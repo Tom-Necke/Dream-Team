@@ -1,29 +1,21 @@
-const axios = require('axios');
+const axios = require("axios");
 
-const headers = {
-  "Content-Type": "application/json",
-  "apikey": "863dd533d329430dbb5b19ba56cc6e8a"
-  //"workspace": "YOUR_WORKSPACE_ID"
-}
+const encodedParams = new URLSearchParams();
+encodedParams.append("url", "https://google.com/");
 
-async shorten = url => {
-    let endpoint = "https://api.rebrandly.com/v1/links";
-  let linkRequest = {
-    destination: url,
-    domain: { fullName: "rebrand.ly" }
-    //, slashtag: "A_NEW_SLASHTAG"
-    //, title: "Rebrandly YouTube channel"
-  }
-  const apiCall = {
-      method: 'post',
-      url: endpoint,
-      data: linkRequest,
-      headers: headers
-  }
-  let apiResponse = await axios(apiCall);
-  let link = apiResponse.data;
-  return link.shortUrl;
-}
+const options = {
+  method: 'POST',
+  url: 'https://url-shortener-service.p.rapidapi.com/shorten',
+  headers: {
+    'content-type': 'application/x-www-form-urlencoded',
+    'X-RapidAPI-Host': 'url-shortener-service.p.rapidapi.com',
+    'X-RapidAPI-Key': 'cb25ffdc53mshc1ee90622401fcep16f4e3jsn6916805df050'
+  },
+  data: encodedParams
+};
 
-let shortUrl = await shorten("https://www.youtube.com/channel/UCHK4HD0ltu1-I212icLPt3g");
-console.log(shortUrl);
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
