@@ -1,7 +1,8 @@
+#!/usr/bin/env node
 const axios = require("axios");
-
+let [userUrl] = process.argv.slice(2)
 const encodedParams = new URLSearchParams();
-encodedParams.append("url", "https://google.com/");
+encodedParams.append("url", `https://${userUrl}`);
 
 const options = {
   method: 'POST',
@@ -19,3 +20,4 @@ axios.request(options).then(function (response) {
 }).catch(function (error) {
 	console.error(error);
 });
+
