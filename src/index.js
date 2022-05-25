@@ -19,13 +19,13 @@ const options = {
   data: encodedParams
 };
 
-let line1 = "-------------------------------------------------------------------------------------------------------------------";
-let line2 = "-------------------------------------------------------------------------------------------------------------------";
+let lines = "           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ";
+
 let duck = gradient('orange', 'yellow').multiline([
-  "  __",
-  "<(o )___",
-  " ( ._> /",
-  "  `---'",
+"          |   __                                                                                                        |",
+"            <(o )___                                                                                                     ",
+"          |  ( ._> /                                                                                                    |",
+"              `---'",
 ].join('\n'));
   //"    __  ",
   //"___( o)>",
@@ -33,33 +33,48 @@ let duck = gradient('orange', 'yellow').multiline([
   //" '---´",
 
 let logo = gradient('blue','red').multiline([
-"            ██████╗░██████╗░███████╗░█████╗░███╗░░░███╗  ████████╗███████╗░█████╗░███╗░░░███╗",
-"            ██╔══██╗██╔══██╗██╔════╝██╔══██╗████╗░████║  ╚══██╔══╝██╔════╝██╔══██╗████╗░████║",
-"            ██║░░██║██████╔╝█████╗░░███████║██╔████╔██║  ░░░██║░░░█████╗░░███████║██╔████╔██║",
-"            ██║░░██║██╔══██╗██╔══╝░░██╔══██║██║╚██╔╝██║  ░░░██║░░░██╔══╝░░██╔══██║██║╚██╔╝██║",
-"            ██████╔╝██║░░██║███████╗██║░░██║██║░╚═╝░██║  ░░░██║░░░███████╗██║░░██║██║░╚═╝░██║",
-"            ╚═════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝  ░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝",
+"                          ░██████╗██╗░░██╗░█████╗░██████╗░████████╗██╗░░░██╗░░░░░░░█████╗░██████╗░██████╗░               ",
+"          |               ██╔════╝██║░░██║██╔══██╗██╔══██╗╚══██╔══╝╚██╗░██╔╝░░░░░░██╔══██╗██╔══██╗██╔══██╗              |",
+"                          ╚█████╗░███████║██║░░██║██████╔╝░░░██║░░░░╚████╔╝░█████╗███████║██████╔╝██████╔╝               ",
+"          |               ░╚═══██╗██╔══██║██║░░██║██╔══██╗░░░██║░░░░░╚██╔╝░░╚════╝██╔══██║██╔═══╝░██╔═══╝░              |",
+"                          ██████╔╝██║░░██║╚█████╔╝██║░░██║░░░██║░░░░░░██║░░░░░░░░░██║░░██║██║░░░░░██║░░░░░               ",
+"          |               ╚═════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░░░░╚═╝░░░░░░░░░╚═╝░░╚═╝╚═╝░░░░░╚═╝░░░░░              |",
+].join('\n'));
+
+let logo2 = gradient('blue', 'red').multiline([
+"                          █▀▄ █▀█ █▀▀ ▄▀█ █▀▄▀█   ▀█▀ █▀▀ ▄▀█ █▀▄▀█                                                      ",
+"          |               █▄▀ █▀▄ ██▄ █▀█ █░▀░█   ░█░ ██▄ █▀█ █░▀░█                                                     |",
 ].join('\n'));
 
 
+
+
 axios.request(options).then(function (response) {
-  console.log();
-  console.log(line1)
-  console.log(`
-  
-            Hello Nerd!
-
-            Thank you for your input: ${chalk.bgWhite.blueBright(userUrl)}! Interesting! Our suggestion is the following! `)
-  console.log(`${duck} ${gradient("lightBlue", "yellow", "red")("    The return of the shorty:")} ${chalk.bgCyan.black(response.data.result_url)}!`);
-  console.log();
-  console.log(`
-
-            Shorty-App is a solution by:`);
-  console.log();
+  console.log(
+"                                                                                                                    ");
+  console.log(lines)
+  console.log(
+`          |                                                                                                             |`);
   console.log(logo);
-  console.log(`             © Christoph, Joachim, Tom`);
-  console.log(line2);
+
+  console.log(lines)
+  console.log(
+`
+          |          Hello Nerd!                                                                                        |
+                     Thank you for your input: ${chalk.bgRed.blue(userUrl)}! Interesting! Our suggestion is following!`)
+  console.log(`${duck} ${gradient("lightBlue", "yellow", "red")(" The return of the shorty:")} ${chalk.bgBlueBright.red(response.data.result_url)}!                                                    `);
+  console.log(
+`          |                                                                                                             |`);
+  console.log(
+`                     Shorty-App is a solution by:                                                                            `);
+  console.log(
+`          |                                                                                                             |`);
+  console.log(logo2);
   console.log();
+  console.log(
+`          |          © Christoph, Joachim, Tom                                                                          |`);
+  console.log(lines);
+
 }).catch(function (error) {
 	console.error(error);
 });
