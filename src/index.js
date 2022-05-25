@@ -2,7 +2,7 @@
 import chalk from "chalk";
 import axios from "axios";
 import gradient from "gradient-string";
-import chalkAnimation from "chalk-animation";
+
 
 let [userUrl] = process.argv.slice(2);
 const encodedParams = new URLSearchParams();
