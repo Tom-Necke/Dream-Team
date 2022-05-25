@@ -36,7 +36,7 @@ The return of the Shorty: __________________!
 Shorty-App is a solution by Dream-Team.
 
 ## Experience on working together
-
+After getting to the point of a clear task we felt much better in our situation. Nevertheless the exercise showed that the experience is interesting. We were not able 
 
 
 
