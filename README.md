@@ -1,7 +1,7 @@
 # Dream-Team
 Team members: Christoph, Joachim, Tom (Manager)
 # Projektarbeit API-Projekt
-## FBW_WD_21_D05
+## FBW_WD_21_D05 DCI
 ## May 2022
 
 
@@ -25,6 +25,8 @@ Development on an App by implementing an API, with additional design features
 6. Text. We wanted toadd at least some text-elements providing some interaction. Input was not possible on an terminal. But some general text elements seemed important to us.
 7. An additional graphic element was implemented. The duck is a little nice feature.
 8. Further structure was suggested by a surrounding frame to give a better project-structure. 
+9 Final changes in design questions and work on documentation and presentation of the project.
+10. Satisfied members of the team.
 
 
 ## Text for Shorty-App
@@ -36,7 +38,8 @@ The return of the Shorty: __________________!
 Shorty-App is a solution by Dream-Team.
 
 ## Experience on working together
-After getting to the point of a clear task we felt much better in our situation. Nevertheless the exercise showed that the experience is interesting. We were not able 
+After getting to the point of a clear task we felt much better in our situation. Nevertheless the exercise showed that the experience is interesting. We were not able to make a structured working plan because of the missing expereience and missing understanding what is expected and waht is might be possible.
+The team developed a team feeling after we solved major problems and since we focussed on the project itselve after decisions were made. In the end the team members worked on individual aspects of the project and we had no critical issues on working together.
 
 
 
