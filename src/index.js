@@ -19,10 +19,8 @@ const options = {
   data: encodedParams
 };
 
-let lines =
-  "           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ";
-// "           ________________________________________________________________________________________________________________ ";
-let lines2 = "          | _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ |";
+let lines = "           _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ";
+
 let duck = gradient('orange', 'yellow').multiline([
 "          |   __                                                                                                        |",
 "            <(o )___                                                                                                     ",
@@ -50,6 +48,7 @@ let logo2 = gradient('blue', 'red').multiline([
 
 
 
+
 axios.request(options).then(function (response) {
   console.log(
 "                                                                                                                    ");
@@ -57,6 +56,7 @@ axios.request(options).then(function (response) {
   console.log(
 `          |                                                                                                             |`);
   console.log(logo);
+
   console.log(lines)
   console.log(
 `
@@ -74,6 +74,7 @@ axios.request(options).then(function (response) {
   console.log(
 `          |          © Christoph, Joachim, Tom                                                                          |`);
   console.log(lines);
+
 }).catch(function (error) {
 	console.error(error);
 });
