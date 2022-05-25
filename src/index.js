@@ -74,6 +74,7 @@ axios.request(options).then(function (response) {
   console.log(
 `          |          © Christoph, Joachim, Tom                                                                          |`);
   console.log(lines);
+  console.log();
 
 }).catch(function (error) {
 	console.error(error);
